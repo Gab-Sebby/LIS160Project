@@ -1,6 +1,6 @@
-import mysql.connector
+import mysql.connector.python
 
-dataBase = mysql.connector.connect(
+dataBase = mysql.connector.python.connect(
 	host = 'localhost',
 	user = 'root',
 	passwd = '101406'
@@ -8,9 +8,9 @@ dataBase = mysql.connector.connect(
 	)
 
 #1: Preparing a cursor object
-cursor0bject = dataBase.cursor()
+cursorObject = dataBase.cursor()
 
 #2: Create a database
-cursor0bject.execute("CREATE DATABASE elderco")
+cursorObject.execute("CREATE DATABASE elderco")
 
 print("All Done!")
